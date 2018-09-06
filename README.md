@@ -6,9 +6,14 @@ I want to start evaluating the state of rust and its image processing libraries.
 
 ```
 
-| **Library** | **Original** | **Resized** | **Elapsed** |
-|---|---|---|---|
-| _raster_ | 2000x2000 | 700x700 | 4.671 |
-| _raster_ | 2000x2000 | 150x150 | 3.630 |
-| _image_ | 2000x2000 | 700x700 | 3.572 |
-| _image_ | 2000x2000 | 150x150 | 3.245 |
+| **Library** | **Original** | **Resized** | **Sampling** |  **Function** | **Elapsed** |
+|---|---|---|---|---|---|
+| _raster_ | 2000x2000 | 700x700 | Unknown | resize | 4.671 |
+| _raster_ | 2000x2000 | 150x150 | Unknown | resize | 3.630 |
+| _image_ | 2000x2000 | 700x700 | Unknown | thumbnail | 3.572 |
+| _image_ | 2000x2000 | 150x150 | Unknown | thumbnail | 3.245 |
+| _image_ | 2000x2000 | 150x150 | Lanczos3 | resize | 10.593 |
+| _image_ | 2000x2000 | 150x150 | Gaussian | resize | 9.270 |
+| _image_ | 2000x2000 | 150x150 | CatmullRom | resize | 6.910 |
+| _image_ | 2000x2000 | 150x150 | Nearest | resize | 2.458 |
+| _image_ | 2000x2000 | 150x150 | Triangle | resize | 4.549 |
