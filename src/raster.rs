@@ -16,8 +16,8 @@ fn main() -> Result<(), Box<Error>> {
     let height = args.next().unwrap().parse()?;
 
     // Do the job
-    let now = SystemTime::now();
     let mut image = raster::open(file_location.as_str()).unwrap();
+    let now = SystemTime::now();
     editor::resize(&mut image, width, height, ResizeMode::Fill).unwrap();
     if let Ok(elapsed) = now.elapsed() {
         println!(

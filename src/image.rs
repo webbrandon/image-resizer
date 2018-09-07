@@ -19,9 +19,9 @@ fn main() -> Result<(), Box<Error>> {
         true
     };
     // Do the job
-    let now = SystemTime::now();
     let img = image::open(&file_location)?;
     let mut resized:image::DynamicImage = image::DynamicImage::new_rgba8(0, 0);
+    let now = SystemTime::now();
     if thumbnail {
         println!("Resizing as thumbnail");
         resized = img.thumbnail_exact(width, height);
