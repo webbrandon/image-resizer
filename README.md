@@ -25,3 +25,7 @@ Test performed with :
   L3 Cache:	6 MB
   Memory:	16 GB
 ```
+
+## Purpose 
+
+Goal is to migrate image resizing app from Node.js using [sharp](http://sharp.pixelplumbing.com/en/stable/).  The resizing for this library with equivalent image test for below metrics is _0.101s_.  If I can find a faster path to resizing I can begin moving forward on this initiative.
