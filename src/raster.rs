@@ -28,7 +28,7 @@ fn main() -> Result<(), Box<Error>> {
     }
     
     // Create output file name and mime.
-    let mut out_file_name = "out.".to_string();
+    let mut out_file_name = "raster-out.".to_string();
     let mime = file_location.char_indices().rev().map(|(i, _)| i).nth(2).unwrap();
     let file_type = &file_location[mime..];
     out_file_name.push_str(file_type);
